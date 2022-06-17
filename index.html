@@ -11,16 +11,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- STYLES -->
-    <!-- <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/main.css"> -->
-    <link rel="stylesheet" href="styles/main.min.css">
+    <link rel="stylesheet" href="./styles/breakpoints.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css"> 
+    <!-- <link rel="stylesheet" href="styles/main.min.css"> -->
 </head>
 <body>
     <!-- HEADER SECTION -->
         <header class="main-header">
             <div class="main-header__container container">
                 <a class="main-header__brand" href="index.html">
-                    <img src="./images/ansorMed-logo.svg" alt="Ansor medning logosi" height="50" width="50">
+                    <img class="logo-img" src="./images/ansorMed-logo.svg" alt="Ansor medning logosi" height="50" width="50">
                     <span class="logo-text">AnsorMed</span>
                 </a>
                 <nav class="main-nav">
@@ -31,8 +32,8 @@
                         <li class="main-nav__item"><a href="#">Kontaktlar</a></li>
                         <li class="main-nav__item"><a href="#">Blog</a></li>
                     </ul>
+                    <a href="#" class="main-btn header__btn">Qabulga yozilish</a>
                 </nav>
-                <a href="#" class="main-btn header__btn">Qabulga yozilish</a>
             </div>
         </header>
     <!-- /HEADER SECTION -->
@@ -94,8 +95,10 @@
     <!-- CONTACT SECTION -->
     <section class="contact">
         <h2 class="contact__title">Qabulga ro’yxatdan o’ting</h2>
-        <a href="#" class="contact__btn">Qo’ng’iroq qilish</a>
-        <a href="#" class="contact__btn">Telegramdan yozish</a>
+        <div class="contact-btns">
+            <a href="#" class="contact__btn">Qo’ng’iroq qilish</a>
+            <a href="#" class="contact__btn">Telegramdan yozish</a>
+        </div>
     </section>
     <!-- /CONTACT SECTION -->
 
