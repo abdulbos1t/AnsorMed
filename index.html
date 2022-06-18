@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ansor Med</title>
     <link rel="shortcut icon" href="./images/ansorMed-logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,6 +35,7 @@
                     </ul>
                     <a href="#" class="main-btn header__btn">Qabulga yozilish</a>
                 </nav>
+                <button class="toggle"><i class="fa-solid fa-bars"></i></button>
             </div>
         </header>
     <!-- /HEADER SECTION -->
@@ -104,22 +106,25 @@
 
         <!-- FOOTER SECTION -->
     <footer class="footer">
-        <div class="main-header__container container">
+        <div class="main-header__container footer-header container">
             <a class="main-header__brand" href="index.html">
-                <img src="./images/ansorMed-logo.svg" alt="Ansor medning logosi" height="50" width="50">
-                <span class="logo-text">AnsorMed</span>
+                <img class="footer-logo-img"  src="./images/ansorMed-logo.svg" alt="Ansor medning logosi" height="50" width="50" >
+                <span class="footer-logo-text logo-text">AnsorMed</span>
             </a>
-            <nav class="main-nav">
-                <ul class="main-nav__list">
-                    <li class="main-nav__item"><a href="#xizmatlar">Xizmatlar</a></li>
-                    <li class="main-nav__item"><a href="#">Dorilar</a></li>
-                    <li class="main-nav__item"><a href="#">Asal</a></li>
-                    <li class="main-nav__item"><a href="#">Kontaktlar</a></li>
-                    <li class="main-nav__item"><a href="#">Blog</a></li>
+            <nav class="footer-nav">
+                <ul class="footer-nav__list">
+                    <li class="footer-nav__item"><a class="footer-link" href="#xizmatlar">Xizmatlar</a></li>
+                    <li class="footer-nav__item"><a class="footer-link" href="#">Dorilar</a></li>
+                    <li class="footer-nav__item"><a class="footer-link" href="#">Asal</a></li>
+                    <li class="footer-nav__item"><a class="footer-link" href="#">Kontaktlar</a></li>
+                    <li class="footer-nav__item"><a class="footer-link" href="#">Blog</a></li>
                 </ul>
             </nav>
         </div>
     </footer>
     <!-- /FOOTER SECTION -->
+
+    <!-- SCRIPT -->
+    <script src="./js/app.js"></script>
 </body>
 </html>
