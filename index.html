@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <!-- STYLES -->
     <link rel="stylesheet" href="./styles/breakpoints.css">
     <link rel="stylesheet" href="styles/normalize.css">
@@ -46,12 +47,37 @@
             <div class="hero__blog-wrapper">
                 <h2 class="hero-title">Tabiiy davolash usullari yordamida<br> kasalliklardan xalos bo’ling.</h2>
                 <p class="hero-text">Hijoma, manual terapiya, zuluk va turli tabiiy giyohlar eng ko’p uchraydigan kasalliklarni yengishda yordam beradi. Sog’ligingizni o’z ishining professionallariga ishonib topshiring.</p>
-                <a href="#" class="hero__btn main-btn">Qabulga yozilish</a>
+                <a  class="hero__btn main-btn" id="show-btn">Qabulga yozilish</a>
             </div>
             <img src="./images/hero-img.png" alt="Hero img" class="hero-img" srcset="./images/hero-img.png 1x, ./images/hero-img@2x.png 2x" height="504" width="423">
         </div>
     </section>
     <!-- /HERO SECTION -->
+
+
+<!-- MODAL ADD -->
+<div class="container modal-container">
+    <div class="modal" id="modal">
+        <button class="close" id="close-btn"><i class="fa-solid fa-xmark"></i></button>
+        <h2 class="modal-inner">Ro'yxatdan o'tish</h2>
+        <div class="modal-body">
+            <form action="" class="modal-form">
+                <input type="text" name="" id="" placeholder="Ismingizni kiriting">
+                <input type="text" name="" id="" placeholder="Familyangizni kiriting">
+                <input type="number" name="" id="" placeholder="Telefon raqamingiz">
+                <input type="submit" value="Yuborish" class="submit">
+            </form>
+        </div>
+    </div>
+</div>
+<!-- MODAL ADD -->
+
+
+
+
+
+
+
 
     <!-- SERVICES SECTION -->
     <section class="services" id="services">
@@ -106,7 +132,7 @@
 
         <!-- FOOTER SECTION -->
     <footer class="footer">
-        <div class="main-header__container footer-header container">
+        <div class=" container footer-container ">
             <a class="main-header__brand" href="index.html">
                 <img class="footer-logo-img"  src="./images/ansorMed-logo.svg" alt="Ansor medning logosi" height="50" width="50" >
                 <span class="footer-logo-text logo-text">AnsorMed</span>

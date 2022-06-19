@@ -14,6 +14,7 @@ body {
     font-family: 'Open Sans', Arial, sans-serif;
 }
 .container {
+    /* position: relative; */
     width: 100%;
     max-width: 1140px;
     padding: 0 2rem;
@@ -94,6 +95,7 @@ body {
 }
 
 .main-btn {
+    cursor: pointer;
     display: inline-block;
     background-color: #de2e54;
     border-radius: 8px;
@@ -138,6 +140,7 @@ body {
     display: none;
 }
 .hero {
+    position: relative !important;
     padding: 12rem 0;
     background-color: #0eb4c1;
     color: #fff;
@@ -185,6 +188,90 @@ body {
     margin-bottom: -12rem;
     display: block;
 }
+
+
+/* MODAL STYLES */
+.hidden{
+    display: none;
+}
+.modal-container{
+    padding: 0 3rem !important;
+}
+.modal{
+    display: none;
+    border-radius: 1rem;
+    position: absolute;
+    padding: 2rem;
+    max-width: 43rem;
+    width: 100%;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 23rem;
+    left: 50%;
+}
+.close{
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+.fa-xmark{
+    cursor: pointer;
+    color: #fff;
+    font-size: 2rem;
+}
+.modal-inner{
+    font-family: 'Open Sans Condensed', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-align: center; 
+    color: rgb(235, 230, 230);
+    margin-bottom: 2rem;
+}
+.modal-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modal-form input{
+    font-family: Arial, sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 0.8rem;
+    margin-bottom: 2rem;
+    outline: none;
+    width: 90%;
+    padding: 1rem;
+}
+.modal-form input::placeholder{
+    font-weight: 400 !important ;
+    color: rgb(176, 179, 183);
+}
+.submit{
+   width: 17rem !important; 
+}
+.submit:hover{
+    background-color: #231c1e;
+    color: #fff;
+}
+/* MODAL STYLES  END*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .services {
     padding: 12rem 2rem;
     background-color: #fff;
@@ -288,31 +375,31 @@ body {
 .contact__btn:last-child {
     margin-left: 4rem;
 }
-.footer {
+
+
+/* FOOTER STYLES */
+.footer{
     padding: 2.4rem 0;
     background-color: #222;
+    /* border: 2px solid red; */
 }
-.footer-nav{
-    width: 0;
+.footer-container{
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
 }
-.footer-nav__list {
-    margin-right: 5rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
+.footer-logo-text{
+    color: #fff;
+}
+.footer-nav__list{
+    list-style: none;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    list-style-type: none;
 }
 .footer-nav__item:not(:last-child) {
     margin-right: 3.2rem;
 }
-.footer-nav__item a {
-
+.footer-link {
     text-decoration: none;
     color: #fff;
     font-weight: 700;
@@ -321,18 +408,16 @@ body {
     letter-spacing: 2px;
     text-transform: uppercase;
 }
-.footer-nav__item a:active {
+
+.footer-link:active {
     opacity: .6;
 }
-.footer .logo-text:hover, .footer .main-nav__item a:hover {
+.footer-link:hover {
     color: #de2e54;
 }
 .footer .logo-text, .footer .logo-text:active, .footer .main-nav__item a, .footer .main-nav__item a:active {
     color: #fff;
-}
-
-
-
+} 
 
 
 
@@ -340,9 +425,18 @@ body {
 
 
 /* BREAKPOINTS */
-@media (max-width: 992px){}
-@media (max-width: 767px){}
-@media (max-width: 575px){
+@media (max-width: 992px){
+    html{
+        font-size: 8px;
+    }
+    .footer-header{
+        position: relative !important;
+        display: flex;
+    }
+ 
+
+}
+@media (max-width: 767px){
     html{
         font-size: 8px !important;
     }
@@ -353,7 +447,64 @@ body {
         display: block ;
         position: fixed;
         background-color: rgb(255, 255, 255);
-        width: 46rem;
+        width: 69rem;
+        top: 0rem;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        align-items: center !important;
+        justify-content: center !important;
+        transform: translateX(-100%);
+        transition: transform 0.5s;
+    }
+
+    .main-nav__list{
+        margin-right: 0;
+        margin-top: 15rem;
+        flex-direction: column;  
+    }
+    .main-nav__item{
+        margin-bottom: 2rem;
+    }
+    .main-nav__item:not(:last-child){
+        margin-right: 0;
+    }
+    .header__btn{
+        position: absolute;
+        left: 24.5rem;
+        z-index: 1;
+    }
+    .footer-container{
+        align-items: stretch;
+    }
+    .footer-nav{
+        /* justify-content: center; */
+        align-items: center;
+        margin-top: 2rem;
+    }
+    .footer-nav__item:not(:last-child) {
+        margin-right: 2rem;
+    }
+    .footer-nav__list{
+        margin-right: 0;
+    }
+}
+@media (max-width: 575px){
+    .modal{
+        left: 4%;
+        top: 60rem;
+    }
+    html{
+        font-size: 8px !important;
+    }
+    .toggle{
+        display: block;
+    }
+    .main-nav{
+        display: block ;
+        position: fixed;
+        background-color: rgb(255, 255, 255);
+        width: 45rem;
         top: 0rem;
         right: 0;
         left: 0;
@@ -398,6 +549,13 @@ body {
     .hero-img{
         margin-bottom: 0;
     }
+
+    .modal{
+        top: 60rem;
+        max-width: 36rem;
+        /* left: 2.5rem; */
+        margin-left: -20.5rem;
+    }
     .services__blog{
         flex-direction: column;
     }
@@ -410,7 +568,7 @@ body {
     .contact__btn{
         padding: 1rem 2rem;
     }
-    .footer-header{
+    .footer-container{
         /* display: flex; */
     
         flex-direction: column;
@@ -435,6 +593,12 @@ body {
 }
 
 @media (max-width: 320px){
+    .modal{
+        top: 60rem;
+        max-width: 36rem;
+        /* left: 2.5rem; */
+        margin-left: -18rem;
+    }
     html{
         font-size: 7px ;
     }
@@ -502,10 +666,10 @@ body {
         margin-left: 0;
         margin-top: 2rem;
     }
-    .footer-header{
+    .footer-container{
         /* display: flex; */
     
-        flex-direction: column;
+        flex-direction: column !important;
         align-items: flex-start;
     }
     .footer-logo-img{
